@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhongyuan Wang &middot; Founding ML Scientist</title>
+<meta name="description" content="Zhongyuan Wang, Founding ML Scientist specializing in AI, LLM, agent, and unsupervised graph models.">
+<style>
+  :root{
+    --bg:#0f1117; --card:#181b24; --line:#262a36; --txt:#e7eaf0;
+    --muted:#9aa3b2; --accent:#5b8cff; --accent2:#34d399;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:32px 28px;max-width:880px;margin:0 auto}
+  header{margin-bottom:8px}
+  h1{font-size:30px;font-weight:700;letter-spacing:-.4px}
+  .role{color:var(--accent);font-size:15px;font-weight:600;margin-top:4px}
+  .tag{color:var(--muted);font-size:14px;margin-top:8px;max-width:620px}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+  .links a{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:8px 14px;font-size:13.5px;text-decoration:none;transition:border-color .15s}
+  .links a:hover{border-color:var(--accent)}
+  .links a.primary{background:linear-gradient(180deg,#1d3361,#15203a);border-color:#2a3a63;color:#dce6ff}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:30px 0 14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+  .job{margin-bottom:20px}
+  .job .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .job .title{font-weight:600;font-size:15px}
+  .job .org{color:var(--muted);font-size:13.5px}
+  .job .when{color:var(--muted);font-size:12.5px;flex:none}
+  ul{margin:8px 0 0 18px}
+  li{margin:5px 0;font-size:14px}
+  .pubs li{margin:9px 0}
+  .pubs .meta{color:var(--muted);font-size:12.5px}
+  .skill{display:flex;gap:12px;margin:9px 0;flex-wrap:wrap}
+  .skill .k{width:120px;flex:none;color:var(--accent2);font-weight:600;font-size:13.5px}
+  .skill .v{flex:1;font-size:13.5px;min-width:240px}
+  a{color:var(--accent)}
+  .patents{font-size:14px}
+  .patents .nums{color:var(--muted);font-size:13px;margin-top:6px;font-family:ui-monospace,Menlo,Consolas,monospace}
+  .foot{color:var(--muted);font-size:12px;margin-top:36px;border-top:1px solid var(--line);padding-top:14px}
+  @media(max-width:620px){.job .when{width:100%}}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Zhongyuan Wang</h1>
+    <div class="role">Founding ML Scientist @ RaptorX.AI</div>
+    <div class="tag">Specializing in AI, LLM, agent, and unsupervised graph models. 20 patents. 5 enterprise customers across the US, India, and the Gulf.</div>
+  </header>
+
+  <div class="links">
+    <a class="primary" href="Zhongyuan_Wang_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+    <a href="https://github.com/zywang0108" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/zhongyuanwang" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:wang1504626@gmail.com">Email</a>
+  </div>
+
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="top"><span><span class="title">Founding ML Scientist</span> <span class="org">&middot; RaptorX.AI, Remote</span></span><span class="when">2024 - Present</span></div>
+    <ul>
+      <li>Built an unsupervised fraud detection engine from zero, combining proprietary GNN models, behavioral autoencoders, explainability, and LLM investigation reports. Unifies unsupervised detection, graph fraud-ring discovery, and audit-ready explainability in a single system.</li>
+      <li>Engineered thousands of features across 4 scenarios, processing 10M+ transactions, 590K+ entities, and 2.8M edges. A novel edge-probability model across 30 relationship types eliminates dependency on fraud labels.</li>
+      <li>Achieved 328&times; candidate reduction (590K to 1,883 high-confidence alerts) at 99.9% fraud-type specificity.</li>
+      <li>Converted PoCs into 5 signed enterprise customers across the US, India, and the Gulf; the US deployment alone covers 460K+ users across 6,700+ employers.</li>
+      <li>Delivered technical deep-dives to global investors from seed stage onward.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top"><span><span class="title">Senior Engineer, AI &amp; Data Platform for Autonomous Driving</span> <span class="org">&middot; Lotus Tech (Geely Group), Hangzhou</span></span><span class="when">2021 - 2024</span></div>
+    <ul>
+      <li>Led a fully in-house video anonymization pipeline from data-collection vehicles (80+ TB/day) to the data center. YOLOv5-based model with 90%+ recall on faces and license plates across 10M+ frames, ensuring GDPR/PIPL compliance.</li>
+      <li>Reduced latency 30% via GPU-accelerated inference at fleet scale; saved roughly $1M/year by replacing third-party vendors entirely.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top"><span><span class="title">Independent ML Study &amp; Graph-ML Projects</span></span><span class="when">2020 - 2021</span></div>
+    <ul>
+      <li>Self-directed study of graph machine learning: implemented GNN models for node classification and link prediction on public datasets.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top"><span><span class="title">Software Development Engineer, Financial Anti-Fraud</span> <span class="org">&middot; DataVisor, Shanghai</span></span><span class="when">2020</span></div>
+    <ul>
+      <li>Built an unsupervised loan application fraud model combining GNN and traditional ML, using hundreds of features across behavioral, device, third-party credit, and raw transaction data.</li>
+      <li>Directly contributed to securing a $500,000 enterprise contract through technical leadership and client demonstration.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="top"><span><span class="title">Research Intern, DiDi AI Labs</span> <span class="org">&middot; UCL-DiDi Master Research Program, Beijing</span></span><span class="when">2019</span></div>
+    <ul>
+      <li>Leveraging Graph Neural Networks for user travel intent prediction, supervised by Prof. Jieping Ye (VP of DiDi Chuxing, IEEE Fellow).</li>
+      <li>Selected as 1 of only 2 projects (out of 30+ candidates) across the entire UCL cohort for the DiDi AI Labs research program.</li>
+    </ul>
+  </div>
+
+  <h2>Publications</h2>
+  <ul class="pubs">
+    <li>When the Tool Decides: LLM Agents Defer Blindly to GNN Tools<br><span class="meta">First author, under review (TMLR) &middot; <a href="https://arxiv.org/abs/2606.14476" target="_blank" rel="noopener">arXiv:2606.14476</a></span></li>
+    <li>LLM Features Can Hurt GNNs: Concatenation Interference on Homophilous Graphs<br><span class="meta">First author, under review (TMLR)</span></li>
+    <li>How Much Do Deep GNNs Actually Help? Decomposing Depth, Features, and Structure<br><span class="meta">First author, under review (NeurIPS 2026 E&amp;D)</span></li>
+  </ul>
+
+  <h2>Patents</h2>
+  <div class="patents">
+    Inventor on 20 applications spanning graph-based fraud detection and LLM/agent systems: 6 filed (US), 4 published (India), 10 in draft.
+    <div class="nums">Published (India) App Nos.: 202541024623, 202541045354, 202441079562, 202541032797</div>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skill"><div class="k">ML / Graph</div><div class="v">PyTorch, PyTorch Geometric (PyG), GNNs, autoencoders, anomaly detection, link prediction, fraud-ring detection, LLM-based investigation</div></div>
+  <div class="skill"><div class="k">Data &amp; MLOps</div><div class="v">Spark / PySpark, Kafka, ClickHouse, Redis, Parquet, Docker, Kubernetes, ArgoCD, CI/CD, FastAPI / gRPC, MLflow</div></div>
+  <div class="skill"><div class="k">Cloud</div><div class="v">AWS (S3 / EC2 / ECR), Grafana, Prometheus, Loki</div></div>
+
+  <h2>Education</h2>
+  <div class="job">
+    <div class="top"><span><span class="title">MSc, Data Science and Machine Learning</span> <span class="org">&middot; University College London</span></span><span class="when">2018 - 2019</span></div>
+    <ul><li>Thesis: Graph Convolutional Networks for user behavior prediction (jointly with DiDi AI Labs).</li></ul>
+  </div>
+  <div class="job">
+    <div class="top"><span><span class="title">BSc, Computer Science (Artificial Intelligence)</span> <span class="org">&middot; King's College London</span></span><span class="when">2015 - 2018</span></div>
+  </div>
+
+  <div class="foot">Built as a static page on GitHub Pages &middot; no tracking, no external scripts.</div>
+</body>
+</html>
