@@ -1,0 +1,108 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.35in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{Noto Sans CJK SC}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\emergencystretch=3em
+\sloppy
+\pagestyle{empty}
+
+\definecolor{sectiongray}{HTML}{333333}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{0.4em}{\large\bfseries\color{sectiongray}#1}\par
+  \vspace{-0.45em}\rule{\linewidth}{0.4pt}\vspace{0.1em}
+}
+
+\let\olditemize\itemize
+\let\endolditemize\enditemize
+\renewenvironment{itemize}{%
+  \olditemize
+  \setlength{\itemsep}{0pt}
+  \setlength{\topsep}{0pt}
+  \setlength{\parsep}{0pt}
+  \setlength{\partopsep}{0pt}
+  \setlength{\leftmargin}{1.25em}
+}{\endolditemize}
+
+\newcommand{\entry}[4]{%
+  \textbf{#1} \hfill {\small #2}\\
+  \if\relax\detokenize{#3}\relax
+  \else
+    {\small #3}%
+    \if\relax\detokenize{#4}\relax\else \hfill {\small #4}\fi
+    \par
+  \fi
+  \vspace{-0.2em}
+}
+
+\begin{document}
+\fontsize{9}{10.1}\selectfont
+
+\begin{center}
+{\Large \textbf{王中原}}\\[-0.2em]
+{\small \href{mailto:wang1504626@gmail.com}{wang1504626@gmail.com} \quad | \quad \href{https://www.linkedin.com/in/zhongyuanwang}{linkedin.com/in/zhongyuanwang}}\\[0.2em]
+{\small 创始机器学习科学家，专注 AI、LLM、Agent 和无监督图模型。20 项专利，5 家企业客户覆盖美国、印度和海湾地区。}
+\end{center}
+\vspace{-0.5em}
+
+\cvsection{工作经历}
+\entry{创始机器学习科学家}{2024 至今}{RaptorX.AI，Remote}{}
+\begin{itemize}
+\item 从零构建无监督欺诈检测引擎，结合自研 GNN、行为 autoencoder、可解释性和 LLM 调查报告，统一无监督检测、图欺诈团伙发现与 audit-ready explainability。
+\item 设计数千个特征，覆盖 4 个业务场景，处理 1000 万+ 交易、59 万+ 实体和 280 万条边。基于 30 类关系的 edge-probability model 降低对欺诈标签的依赖。
+\item 实现 328$\times$ 候选压缩 (590K $\rightarrow$ 1,883 high-confidence alerts)，欺诈类型 specificity 达 99.9\%。
+\item 将 PoC 转化为 5 家签约企业客户: Payactiv (US)、NSDL 与 Lenskart (India)、Omantel 与 Thawani Pay (Oman)。美国部署覆盖 46 万+ 用户和 6,700+ 雇主。
+\item 面向全球投资机构进行技术 deep-dive，包括 Venture Guides 与 Claypond Capital。
+\end{itemize}
+
+\entry{高级工程师，自动驾驶 AI 与数据平台}{2021 至 2024}{Lotus Tech (Geely Group)，杭州}{}
+\begin{itemize}
+\item 负责车端采集数据到数据中心的全自研视频匿名化 pipeline，支撑 80+ TB/day 数据流。YOLOv5 模型在人脸与车牌上达到 90\%+ recall，覆盖 1000 万+ 帧，满足 GDPR/PIPL 合规。
+\item 通过 GPU 加速 inference 将延迟降低 30\%，在车队规模替代第三方供应商，节省约 \$1M/year。
+\end{itemize}
+
+\entry{独立机器学习学习与 Graph-ML 项目}{2020 至 2021}{}{}
+\begin{itemize}
+\item 系统学习 graph machine learning，在公开 Kaggle 数据集上实现 GNN node classification 与 link prediction。
+\end{itemize}
+
+\entry{软件开发工程师，金融反欺诈}{2020}{DataVisor，上海}{}
+\begin{itemize}
+\item 为头部商业银行构建无监督贷款申请欺诈模型，结合 GNN 与传统 ML，使用行为、设备、第三方征信和原始交易数据的数百个特征。
+\item 通过技术主导和客户演示，直接贡献 \$500,000 企业合同落地。
+\end{itemize}
+
+\entry{研究实习生，UCL-DiDi Master Research Program}{2019}{DiDi AI Labs，北京}{}
+\begin{itemize}
+\item 项目: Leveraging Graph Neural Networks for User Travel Intent Prediction。导师: Prof. Jieping Ye (DiDi Chuxing VP, IEEE Fellow)。
+\item 作为 UCL cohort 30+ 候选项目中仅 2 个入选 DiDi AI Labs research program 的项目之一，为后续在 RaptorX 将 GNN 应用于金融欺诈检测奠定基础。
+\end{itemize}
+
+\cvsection{专利与论文}
+\textbf{专利}: 发明人，20 项申请，覆盖图欺诈检测与 LLM/agent systems。当前状态: 6 项美国已 filed，4 项印度已 published，10 项 draft。印度 published app nos.: 202541024623, 202541045354, 202441079562, 202541032797。
+
+\textbf{论文}: 第一作者，均 under review。
+\begin{itemize}
+\item When the Tool Decides: LLM Agents Defer Blindly to GNN Tools (TMLR; \href{https://arxiv.org/abs/2606.14476}{arXiv:2606.14476})
+\item LLM Features Can Hurt GNNs: Concatenation Interference on Homophilous Graph Benchmarks (TMLR; \href{https://arxiv.org/abs/2606.17579}{arXiv:2606.17579})
+\item How Much Do Deep GNNs Actually Help? Decomposing Depth, Features, and Structure (NeurIPS 2026 E\&D)
+\end{itemize}
+
+\cvsection{技术技能}
+\textbf{ML / Graph}: PyTorch, PyTorch Geometric (PyG), GNNs, autoencoders, anomaly detection, link prediction, fraud-ring detection, LLM-based investigation\\
+\textbf{Data \& MLOps}: Spark / PySpark, Kafka, ClickHouse, Redis, Parquet, Docker, Kubernetes, ArgoCD, CI/CD, FastAPI / gRPC, MLflow\\
+\textbf{Cloud}: AWS (S3 / EC2 / ECR), Grafana, Prometheus, Loki
+
+\cvsection{教育经历}
+\entry{University College London, UK}{2018 至 2019}{MSc in Data Science and Machine Learning}{}
+Thesis: Graph Convolutional Networks for user behavior prediction (jointly with DiDi AI Labs)。NLP 小组研究项目成绩位列 300 名学生前 3\%。\\[0.2em]
+\entry{King{'}s College London, UK}{2015 至 2018}{BSc in Computer Science (Artificial Intelligence)}{}
+
+\end{document}
