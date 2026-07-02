@@ -32,14 +32,16 @@
 }{\endolditemize}
 
 \newcommand{\entry}[4]{%
-  \textbf{#1} \hfill {\small #2}\\
+  \textbf{#1} \hfill {\small #2}%
   \if\relax\detokenize{#3}\relax
+    \par
   \else
+    \\
     {\small #3}%
     \if\relax\detokenize{#4}\relax\else \hfill {\small #4}\fi
     \par
   \fi
-  \vspace{-0.2em}
+  \vspace{-0.3em}
 }
 
 \begin{document}
@@ -68,7 +70,7 @@
 \item 通过 GPU 加速 inference 将延迟降低 30\%，在车队规模替代第三方供应商，节省约 \$1M/year。
 \end{itemize}
 
-\entry{独立机器学习学习与 Graph-ML 项目}{2020 至 2021}{}{}
+\entry{独立机器学习与 Graph-ML 项目}{2020 至 2021}{}{}
 \begin{itemize}
 \item 系统学习 graph machine learning，在公开 Kaggle 数据集上实现 GNN node classification 与 link prediction。
 \end{itemize}
