@@ -38,6 +38,21 @@
   .patents .nums{color:var(--muted);font-size:13px;margin-top:6px;font-family:ui-monospace,Menlo,Consolas,monospace}
   .foot{color:var(--muted);font-size:12px;margin-top:36px;border-top:1px solid var(--line);padding-top:14px}
   @media(max-width:620px){.job .when{width:100%}}
+  @media print{
+    @page{size:A4;margin:10mm}
+    :root{--bg:#fff;--card:#fff;--line:#d8dde8;--txt:#111827;--muted:#4b5563;--accent:#1d4ed8;--accent2:#047857}
+    body{padding:0;max-width:none;font-size:10.5px;line-height:1.35}
+    h1{font-size:22px}
+    h2{font-size:10px;margin:14px 0 6px;padding-bottom:4px}
+    .links,.foot{display:none}
+    .tag,li,.skill .v,.skill .k,.job .org,.job .when{font-size:10px}
+    .job{margin-bottom:9px}
+    ul{margin-top:4px}
+    li{margin:2px 0}
+    .pubs li{margin:3px 0}
+    .skill{margin:3px 0}
+    a{color:inherit;text-decoration:none}
+  }
 </style>
 </head>
 <body>
@@ -59,9 +74,9 @@
   <div class="job">
     <div class="top"><span><span class="title">Founding ML Scientist</span> <span class="org">&middot; RaptorX.AI, Remote</span></span><span class="when">2024 - Present</span></div>
     <ul>
-      <li>Built criteria-driven multi-agent autopilots for paper/patent production: literature scans, experiment verification, TMLR gates, prior-art search, drafting, counsel handoff, and audit logs.</li>
-      <li>Built an unsupervised fraud detection engine from zero, combining proprietary GNN models, behavioral autoencoders, explainability, and LLM investigation reports. Unifies unsupervised detection, graph fraud-ring discovery, and audit-ready explainability in a single system.</li>
-      <li>Engineered thousands of features across 4 scenarios, processing 10M+ transactions, 590K+ entities, and 2.8M edges. A novel edge-probability model across 30 relationship types eliminates dependency on fraud labels.</li>
+      <li>Built a production-style Agentic Engineering workflow for bank fraud alerts: Agent Loop, Context/Planner, Guardrails, case-store state, Evidence/Report agents, SFT/RLVR/RLHF, evaluation, and runtime/MLOps.</li>
+      <li>Built criteria-driven multi-agent systems for paper/patent production: literature scans, experiment verification, TMLR gates, prior-art search, drafting, counsel handoff, and audit logs.</li>
+      <li>Built the underlying unsupervised fraud engine from zero, combining GNNs, behavioral autoencoders, explainability, and an edge-probability model across 30 relationship types to reduce dependency on fraud labels.</li>
       <li>Achieved 328&times; candidate reduction (590K to 1,883 high-confidence alerts) at 99.9% fraud-type specificity.</li>
       <li>Converted PoCs into 5 signed enterprise customers across the US, India, and the Gulf: Payactiv (US), NSDL and Lenskart (India), Omantel and Thawani Pay (Oman); US deployment covers 460K+ users across 6,700+ employers.</li>
     </ul>
@@ -112,7 +127,7 @@
   </div>
 
   <h2>Technical Skills</h2>
-  <div class="skill"><div class="k">Agent / ML</div><div class="v">LLM APIs, function calling/tool use, multi-agent orchestration, GitHub automation, PyTorch, PyTorch Geometric (PyG), GNNs, autoencoders, fraud-ring detection</div></div>
+  <div class="skill"><div class="k">Agent / ML</div><div class="v">Agentic engineering, LLM APIs, function calling/tool use, guardrails, agent evaluation, PyTorch, PyTorch Geometric (PyG), GNNs, autoencoders, fraud-ring detection</div></div>
   <div class="skill"><div class="k">Data &amp; MLOps</div><div class="v">Spark / PySpark, Kafka, ClickHouse, Redis, Parquet, Docker, Kubernetes, ArgoCD, CI/CD, FastAPI / gRPC, MLflow</div></div>
   <div class="skill"><div class="k">Cloud</div><div class="v">AWS (S3 / EC2 / ECR), cloud GPU workflows, Linux, Grafana, Prometheus, Loki</div></div>
 
