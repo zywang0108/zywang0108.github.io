@@ -68,6 +68,7 @@
 \begin{itemize}
 \item 负责全自研视频匿名化 pipeline，覆盖车端数据接入到数据中心处理，支撑 80+ TB/day 自动驾驶车队数据。
 \item 训练并部署 YOLOv5 人脸/车牌检测模型，覆盖 1000 万+ 帧，对隐私敏感目标达到 90\%+ recall。
+\item 基于 Volcano/Kubernetes 搭建 PyTorch 训练任务的动态 GPU 调度平台，运行在本地 64 卡 NVIDIA A100 80GB 集群（8 台机器 $\times$ 8 张 GPU）上，提升集群利用率，相比阿里云线上集群每年节省约 400 万人民币。
 \item 优化 GPU 加速批量 inference，在车队规模将视频处理延迟降低 30\%，提升数据处理吞吐。
 \item 以内部 ML 平台替代第三方供应商，节省约 \$1M/year，同时支撑 GDPR/PIPL 隐私合规。
 \end{itemize}
